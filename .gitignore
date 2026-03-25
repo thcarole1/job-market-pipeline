@@ -1,0 +1,28 @@
+# .gitignore
+
+# Environnement virtuel
+venv/
+
+# Variables d'environnement sensibles
+.env
+
+# Données brutes
+data/raw/
+data/processed/
+
+# Cache Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Système
+.DS_Store
+Thumbs.db
+
+#.egg-info est un dossier de métadonnées généré automatiquement 
+#par Python lorsqu'un package est installé en mode développement avec :pip install -e .
+#ou lorsque vous avez un fichier `setup.py` ou `setup.cfg` dans votre projet.
+*.egg-info/
