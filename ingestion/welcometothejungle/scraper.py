@@ -98,7 +98,7 @@ async def scraper_wttj(nb_pages: int = 3) -> list:
     return toutes_offres
 
 
-def sauvegarder_brut(offres: list) -> str:
+def sauvegarder_brut(offres: list, timestamp: str = None) -> str:
     """
     Sauvegarde les offres brutes dans data/raw/welcometothejungle/
     avec un timestamp dans le nom de fichier.
@@ -106,7 +106,9 @@ def sauvegarder_brut(offres: list) -> str:
     """
     Path("data/raw/welcometothejungle").mkdir(parents=True, exist_ok=True)
 
-    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    if not timestamp:
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        
     chemin    = f"data/raw/welcometothejungle/offres_{timestamp}.json"
 
     with open(chemin, "w", encoding="utf-8") as f:

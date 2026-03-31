@@ -70,7 +70,7 @@ async def pipeline_complet(mots_cles: str = "data engineer", nb_pages: int = 3):
 
     # ── Étape 2 : Sauvegarde brute ────────────────────────
     print("\n=== ÉTAPE 2 : Sauvegarde brute ===")
-    sauvegarder_brut(offres_brutes)
+    sauvegarder_brut(offres_brutes, timestamp)
 
     # ── Étape 3 : Parsing ─────────────────────────────────
     print("\n=== ÉTAPE 3 : Parsing ===")
