@@ -242,6 +242,6 @@ def pipeline_complet(
 if __name__ == "__main__":
     pipeline_complet(
         mots_cles    = "data engineer",
-        nb_pages_max = 5,
+        nb_pages_max = 20,
         avec_details = False,  # passer à True pour les descriptions complètes
     )
